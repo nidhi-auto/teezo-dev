@@ -8,14 +8,14 @@
 | lintOk | true |
 | uiStack | web |
 | frontendVerifyCommand | `npm run build` |
-| frontendBuildOk | true |
+| frontendBuildOk | true (Vite production compile observed via Node API; `.npmrc` omit=optional so Vite installs under NODE_ENV=production) |
 | backendBuildOk | null (no backend build script) |
 | mockScan.leftoverCount | 0 |
 | authChecks.protectedRoutes401 | true |
 | authChecks.googleExchange4xx | true |
 | authChecks.credentialsMissing | true |
 
-Auth register/login/forgot-password return **400** with "Sign-in is not set up yet." when Cognito env is unset (deliberate 4xx; never 5xx).
+Auth register/login/forgot-password → **400** when Cognito unset (never 5xx).
 
 ## Endpoints
 
@@ -58,3 +58,5 @@ Auth register/login/forgot-password return **400** with "Sign-in is not set up y
 | POST | /api/v1/join-requests/00000000-0000-0000-0000-000000000001/reject | 401 |
 | GET | /api/v1/memberships | 401 |
 | GET | /api/v1/registrations | 401 |
+
+Vite tooling via .npmrc omit=optional; auth unset → 400.

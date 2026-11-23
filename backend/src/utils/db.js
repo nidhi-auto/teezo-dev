@@ -8,8 +8,8 @@ const pool = config.databaseUrl
 export function getPool() {
   if (!pool) {
     const err = new Error('Database is not configured');
-    err.statusCode = 503;
-    err.publicMessage = 'Service is temporarily unavailable.';
+    err.statusCode = 400;
+    err.publicMessage = 'Service is not set up yet.';
     throw err;
   }
   return pool;

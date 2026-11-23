@@ -18,8 +18,21 @@ export const config = {
   },
 };
 
+function looksConfigured(value) {
+  if (!value || typeof value !== 'string') return false;
+  const v = value.trim();
+  if (!v) return false;
+  // Treat common placeholders as unset so smoke never hits live AWS with fakes.
+  if (/^(your-|change-me|placeholder|xxx|todo|example|test-)/i.test(v)) return false;
+  return true;
+}
+
 export function isCognitoConfigured() {
-  return Boolean(config.cognito.userPoolId && config.cognito.clientId && config.cognito.region);
+  return Boolean(
+    looksConfigured(config.cognito.userPoolId) &&
+      looksConfigured(config.cognito.clientId) &&
+      looksConfigured(config.cognito.region),
+  );
 }
 
 export function isGoogleConfigured() {

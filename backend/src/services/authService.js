@@ -22,61 +22,82 @@ export async function register({ name, email, password, role }) {
   if (!isCognitoConfigured()) {
     throw serviceUnavailable();
   }
-  const existing = await userService.findUserByEmail(email);
-  if (existing) {
-    throw badRequest('An account with this email already exists.');
-  }
-  const total = await userService.countUsers();
-  let assignedRole = role || 'player';
-  if (total === 0) {
-    assignedRole = 'super_admin';
-  } else if (assignedRole !== 'player') {
-    assignedRole = 'player';
-  }
+  try {
+    const existing = await userService.findUserByEmail(email);
+    if (existing) {
+      throw badRequest('An account with this email already exists.');
+    }
+    const total = await userService.countUsers();
+    let assignedRole = role || 'player';
+    if (total === 0) {
+      assignedRole = 'super_admin';
+    } else if (assignedRole !== 'player') {
+      assignedRole = 'player';
+    }
 
-  const cognitoSub = await cognitoSignUp(email, password, name);
+    const cognitoSub = await cognitoSignUp(email, password, name);
 
-  const user = await userService.createUser({
-    name,
-    email,
-    role: assignedRole,
-    cognitoSub,
-  });
+    const user = await userService.createUser({
+      name,
+      email,
+      role: assignedRole,
+      cognitoSub,
+    });
 
-  const tokens = await cognitoLogin(email, password);
-  const sub = decodeIdTokenSub(tokens.idToken) || cognitoSub;
-  if (sub) {
-    await userService.syncCognitoSub(user.id, sub);
+    const tokens = await cognitoLogin(email, password);
+    const sub = decodeIdTokenSub(tokens.idToken) || cognitoSub;
+    if (sub) {
+      await userService.syncCognitoSub(user.id, sub);
+    }
+    const fresh = await userService.findUserById(user.id);
+    return authResponse(tokens, fresh);
+  } catch (err) {
+    if (err && err.statusCode && err.statusCode < 500) throw err;
+    throw serviceUnavailable();
   }
-  const fresh = await userService.findUserById(user.id);
-  return authResponse(tokens, fresh);
 }
 
 export async function login({ email, password }) {
-  const tokens = await cognitoLogin(email, password);
-  let user = await userService.findUserByEmail(email);
-  const sub = decodeIdTokenSub(tokens.idToken);
-  if (!user) {
-    const total = await userService.countUsers();
-    user = await userService.createUser({
-      name: email.split('@')[0],
-      email,
-      role: total === 0 ? 'super_admin' : 'player',
-      cognitoSub: sub,
-    });
-  } else if (!user.active) {
-    throw badRequest('This account is deactivated.');
+  if (!isCognitoConfigured()) {
+    throw serviceUnavailable();
   }
-  if (sub && user.cognito_sub !== sub) {
-    await userService.syncCognitoSub(user.id, sub);
+  try {
+    const tokens = await cognitoLogin(email, password);
+    let user = await userService.findUserByEmail(email);
+    const sub = decodeIdTokenSub(tokens.idToken);
+    if (!user) {
+      const total = await userService.countUsers();
+      user = await userService.createUser({
+        name: email.split('@')[0],
+        email,
+        role: total === 0 ? 'super_admin' : 'player',
+        cognitoSub: sub,
+      });
+    } else if (!user.active) {
+      throw badRequest('This account is deactivated.');
+    }
+    if (sub && user.cognito_sub !== sub) {
+      await userService.syncCognitoSub(user.id, sub);
+    }
+    const fresh = await userService.findUserById(user.id);
+    return authResponse(tokens, fresh);
+  } catch (err) {
+    if (err && err.statusCode && err.statusCode < 500) throw err;
+    throw serviceUnavailable();
   }
-  const fresh = await userService.findUserById(user.id);
-  return authResponse(tokens, fresh);
 }
 
 export async function forgotPassword({ email }) {
-  await cognitoForgotPassword(email);
-  return { ok: true };
+  if (!isCognitoConfigured()) {
+    throw serviceUnavailable();
+  }
+  try {
+    await cognitoForgotPassword(email);
+    return { ok: true };
+  } catch (err) {
+    if (err && err.statusCode && err.statusCode < 500) throw err;
+    throw serviceUnavailable();
+  }
 }
 
 export async function googleSignIn(body) {
