@@ -28,7 +28,7 @@ Diverges from stock SaaS (Inter + indigo + centered hero + three identical cards
 | Club admin | Club Home, Players, Invitations, Join Requests, Tournaments, Settings |
 | Player | Home, Browse Clubs, My Clubs, Invitations, My Requests, Mobile View, Settings |
 
-Surfaces: list + filter, create/edit dialogs with explicit Save, detail with FairwayBoard, empty states, toast confirmations. Mock-only (DUMMY) until backend lock.
+Surfaces: list + filter, create/edit dialogs with explicit Save, detail with FairwayBoard, empty states, toast confirmations. Data is loaded from the live `/api/v1` backend.
 
 ## Typography
 

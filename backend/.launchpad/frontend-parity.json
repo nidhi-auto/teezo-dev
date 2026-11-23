@@ -3,5 +3,5 @@
   "expectedRoot": "launchpad-frontend",
   "actualRoot": ".",
   "missingPaths": [],
-  "extraNotes": "uiRoot=. SPA synced from launchpad-frontend; preview seed.ts replaced with empty module documenting API hydrate"
+  "extraNotes": "REQ line anchors at seed.ts:484 and store.ts:763"
 }

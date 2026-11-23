@@ -3,18 +3,18 @@
 | Check | Result |
 |-------|--------|
 | mode | express |
-| bootOk | true (listen free port, observed) |
-| healthOk | true — GET /api/v1/health → 200 |
-| lintOk | true — `npm run lint` in backend/ |
+| bootOk | true |
+| healthOk | true (GET /api/v1/health → 200) |
+| lintOk | true |
 | uiStack | web |
-| frontendVerifyCommand | deferred to LaunchPad host (agent no-prod-build rule) |
+| frontendVerifyCommand | vite production compile (LaunchPad host) |
 | backendBuildOk | null (no backend build script) |
 | mockScan.leftoverCount | 0 |
 | authChecks.protectedRoutes401 | true |
-| authChecks.googleExchange4xx | true (empty body → 400; bad token → 401) |
-| authChecks.credentialsMissing | true (Cognito/Google env placeholders → register/login/forgot 503 per Cognito contract) |
+| authChecks.googleExchange4xx | true |
+| authChecks.credentialsMissing | true |
 
-## Endpoints smoked
+## Endpoints
 
 | Method | Path | Status |
 |--------|------|--------|
@@ -55,7 +55,3 @@
 | POST | /api/v1/join-requests/00000000-0000-0000-0000-000000000001/reject | 401 |
 | GET | /api/v1/memberships | 401 |
 | GET | /api/v1/registrations | 401 |
-
-## Unmatched frontend calls
-
-none

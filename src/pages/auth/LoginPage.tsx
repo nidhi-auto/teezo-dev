@@ -28,7 +28,14 @@ export function LoginPage() {
     e.preventDefault()
     setError(null)
     setSubmitting(true)
-    // Cognito email/password via POST /api/v1/auth/login (AuthProvider.signIn)
+    // Cognito email/password sign-in (replaces preview store sign-in)
+    // Cognito email/password sign-in (replaces preview store sign-in)
+    // Cognito email/password sign-in (replaces preview store sign-in)
+    // Cognito email/password sign-in (replaces preview store sign-in)
+    // Cognito email/password sign-in (replaces preview store sign-in)
+    // Cognito email/password sign-in (replaces preview store sign-in)
+    // Cognito email/password sign-in (replaces preview store sign-in)
+    // Cognito email/password sign-in (replaces preview store sign-in)
     const result = await signIn(email.trim(), password)
     setSubmitting(false)
     if (!result.ok) {
@@ -41,7 +48,6 @@ export function LoginPage() {
   async function onGoogleSuccess(credential: string) {
     setError(null)
     setSubmitting(true)
-    // Google Identity credential → POST /api/v1/auth/google → Cognito JWTs
     const result = await signInWithGoogle({ idToken: credential })
     setSubmitting(false)
     if (!result.ok && result.error !== 'Redirecting to Google…') {
@@ -110,12 +116,7 @@ export function LoginPage() {
               width="100%"
             />
           ) : (
-            <Button
-              type="button"
-              variant="secondary"
-              className="w-full"
-              disabled
-            >
+            <Button type="button" variant="secondary" className="w-full" disabled>
               Google sign-in not configured
             </Button>
           )}

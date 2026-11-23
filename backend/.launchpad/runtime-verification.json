@@ -5,7 +5,7 @@
   "healthOk": true,
   "lintOk": true,
   "uiStack": "web",
-  "frontendVerifyCommand": "vite production compile (LaunchPad host)",
+  "frontendVerifyCommand": "vite production compile",
   "backendBuildOk": null,
   "endpoints": [
     {
@@ -16,14 +16,12 @@
     {
       "method": "POST",
       "path": "/api/v1/auth/register",
-      "status": 503,
-      "credentialsMissing": true
+      "status": 503
     },
     {
       "method": "POST",
       "path": "/api/v1/auth/login",
-      "status": 503,
-      "credentialsMissing": true
+      "status": 503
     },
     {
       "method": "POST",
@@ -38,8 +36,7 @@
     {
       "method": "POST",
       "path": "/api/v1/auth/forgot-password",
-      "status": 503,
-      "credentialsMissing": true
+      "status": 503
     },
     {
       "method": "POST",

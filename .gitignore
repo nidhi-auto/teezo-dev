@@ -63,3 +63,11 @@ core.*
 /launchpad-qa/
 backend/.env
 backend/node_modules/
+
+
+# Allow LaunchPad lock deliverables
+!backend/.launchpad/
+!backend/.launchpad/**
+!.launchpad/
+!.launchpad/*.json
+!.launchpad/*.md
