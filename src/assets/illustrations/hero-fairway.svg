@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 560" fill="none" role="img" aria-label="Morning fairway with flag and bunker">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#B8E8FF"/>
+      <stop offset="55%" stop-color="#E7F7F2"/>
+      <stop offset="100%" stop-color="#C8F0E4"/>
+    </linearGradient>
+    <linearGradient id="fairway" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#1FA888"/>
+      <stop offset="45%" stop-color="#29D1B5"/>
+      <stop offset="100%" stop-color="#147A62"/>
+    </linearGradient>
+    <linearGradient id="rough" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0F6B52"/>
+      <stop offset="100%" stop-color="#0A4A39"/>
+    </linearGradient>
+    <radialGradient id="sun" cx="0.7" cy="0.2" r="0.35">
+      <stop offset="0%" stop-color="#FFF4C2" stop-opacity=".9"/>
+      <stop offset="100%" stop-color="#FFF4C2" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="960" height="560" fill="url(#sky)"/>
+  <ellipse cx="720" cy="90" rx="180" ry="110" fill="url(#sun)"/>
+  <path d="M0 210c80-30 160-48 250-40 120 10 180 55 300 48 90-5 160-40 250-30 70 8 120 30 160 48v324H0V210z" fill="url(#rough)"/>
+  <path d="M80 280c120-70 260-90 400-60 150 32 260 20 400 55v285H80V280z" fill="url(#fairway)"/>
+  <path d="M140 470c40-55 110-80 180-70 55 8 95 40 140 35 60-6 95-50 160-45 50 4 90 35 140 28v142H140V470z" fill="#0E5C48" opacity=".35"/>
+  <ellipse cx="620" cy="390" rx="95" ry="38" fill="#E8D7A8"/>
+  <ellipse cx="620" cy="390" rx="70" ry="24" fill="#D4C08A"/>
+  <ellipse cx="300" cy="420" rx="48" ry="18" fill="#E8D7A8" opacity=".85"/>
+  <path d="M430 455c8-70 18-150 22-210" stroke="#0B3D36" stroke-width="5" stroke-linecap="round"/>
+  <path d="M433 245l78 22-78 18V245z" fill="#F4FBF8" stroke="#0B3D36" stroke-width="3"/>
+  <circle cx="430" cy="458" r="7" fill="#0B3D36"/>
+  <path d="M520 300c30 10 55 8 80-6" stroke="#fff" stroke-opacity=".35" stroke-width="3" stroke-linecap="round"/>
+  <path d="M200 340c40 12 70 8 110-10" stroke="#fff" stroke-opacity=".25" stroke-width="3" stroke-linecap="round"/>
+  <g opacity=".9">
+    <rect x="760" y="300" width="14" height="90" rx="3" fill="#0B3D36"/>
+    <path d="M774 300h70l-18 28 18 28h-70V300z" fill="#29D1B5"/>
+    <path d="M774 300h70l-18 28 18 28h-70V300z" fill="#0B3D36" opacity=".15"/>
+  </g>
+  <ellipse cx="200" cy="500" rx="140" ry="18" fill="#0A4A39" opacity=".25"/>
+</svg>

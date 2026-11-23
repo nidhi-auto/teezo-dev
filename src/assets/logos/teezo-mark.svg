@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none" role="img" aria-label="Teezo">
+  <rect width="64" height="64" rx="16" fill="#29D1B5"/>
+  <path d="M14 48V12h5.2c8.4 0 13.6 4.1 13.6 11.2 0 7.2-5.4 11.4-14 11.4H19.2V48H14zm5.2-16.2h.9c4.6 0 7.4-2.3 7.4-6.4 0-4-2.6-6.2-7.2-6.2h-1.1v12.6z" fill="#0B3D36"/>
+  <circle cx="46" cy="18" r="6" fill="#0B3D36"/>
+  <path d="M46 24.2V46" stroke="#0B3D36" stroke-width="3" stroke-linecap="round"/>
+  <path d="M38 50c2.8-4.5 7.2-7 12-7" stroke="#0B3D36" stroke-width="2.4" stroke-linecap="round" opacity=".55"/>
+</svg>

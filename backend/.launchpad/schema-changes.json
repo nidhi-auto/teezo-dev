@@ -1,0 +1,74 @@
+{
+  "alteredTables": [],
+  "newTables": [
+    {
+      "name": "users",
+      "justification": "Greenfield empty clone; Cognito-linked profiles and roles",
+      "fks": []
+    },
+    {
+      "name": "clubs",
+      "justification": "No existing club table; golf club master entity",
+      "fks": [{ "column": "admin_user_id", "references": "users.id" }]
+    },
+    {
+      "name": "club_memberships",
+      "justification": "Players may belong to multiple clubs",
+      "fks": [
+        { "column": "club_id", "references": "clubs.id" },
+        { "column": "user_id", "references": "users.id" }
+      ]
+    },
+    {
+      "name": "tournaments",
+      "justification": "Club tournament lifecycle",
+      "fks": [
+        { "column": "club_id", "references": "clubs.id" },
+        { "column": "created_by_user_id", "references": "users.id" }
+      ]
+    },
+    {
+      "name": "tournament_registrations",
+      "justification": "Player entries for live tournaments",
+      "fks": [
+        { "column": "tournament_id", "references": "tournaments.id" },
+        { "column": "user_id", "references": "users.id" }
+      ]
+    },
+    {
+      "name": "invitations",
+      "justification": "Club admin email invites",
+      "fks": [
+        { "column": "club_id", "references": "clubs.id" },
+        { "column": "invited_by_user_id", "references": "users.id" }
+      ]
+    },
+    {
+      "name": "join_requests",
+      "justification": "Player-initiated club join requests",
+      "fks": [
+        { "column": "club_id", "references": "clubs.id" },
+        { "column": "player_user_id", "references": "users.id" },
+        { "column": "reviewed_by_user_id", "references": "users.id" }
+      ]
+    },
+    {
+      "name": "user_settings",
+      "justification": "Notification preferences from SettingsPage",
+      "fks": [{ "column": "user_id", "references": "users.id" }]
+    }
+  ],
+  "reusedEntities": [],
+  "newFolders": [
+    { "path": "backend/src", "justification": "Greenfield Express application root" },
+    { "path": "backend/src/utils", "justification": "Shared config/auth/db/logger layer" },
+    { "path": "backend/src/middleware", "justification": "Auth and authorize middleware" },
+    { "path": "backend/src/routes", "justification": "HTTP route mounting" },
+    { "path": "backend/src/controllers", "justification": "Request handlers" },
+    { "path": "backend/src/services", "justification": "Business/data layer" },
+    { "path": "backend/migrations", "justification": "SQL migrations folder" },
+    { "path": "backend/scripts", "justification": "migrate runner" },
+    { "path": "backend/plan", "justification": "Release lock plan deliverable" },
+    { "path": "backend/.launchpad", "justification": "Lock verification artifacts" }
+  ]
+}

@@ -1,0 +1,161 @@
+@import "tailwindcss";
+
+/* Raw → role → component tokens. Components consume role/component only. */
+:root {
+  /* Raw */
+  --raw-teal-500: oklch(0.78 0.124 175);
+  --raw-teal-600: oklch(0.68 0.12 175);
+  --raw-teal-700: oklch(0.52 0.1 175);
+  --raw-teal-900: oklch(0.32 0.06 175);
+  --raw-navy-600: oklch(0.42 0.09 250);
+  --raw-navy-800: oklch(0.28 0.07 250);
+  --raw-white: oklch(1 0 0);
+  --raw-ink: oklch(0.22 0.02 175);
+  --raw-success: oklch(0.62 0.14 155);
+  --raw-warning: oklch(0.72 0.14 75);
+  --raw-danger: oklch(0.58 0.18 25);
+
+  /* Role */
+  --background: var(--raw-white);
+  --foreground: var(--raw-ink);
+  --surface: oklch(0.98 0.008 175);
+  --surface-elevated: var(--raw-white);
+  --muted: oklch(0.94 0.012 175);
+  --muted-foreground: oklch(0.48 0.02 175);
+  --primary: var(--raw-teal-500);
+  --primary-hover: var(--raw-teal-600);
+  --primary-foreground: var(--raw-teal-900);
+  --accent: var(--raw-navy-600);
+  --accent-foreground: var(--raw-white);
+  --border: oklch(0.9 0.016 175);
+  --ring: var(--raw-teal-500);
+  --success: var(--raw-success);
+  --warning: var(--raw-warning);
+  --destructive: var(--raw-danger);
+  --destructive-foreground: var(--raw-white);
+  --sidebar: oklch(0.97 0.012 175);
+  --sidebar-foreground: var(--raw-ink);
+  --sidebar-active: oklch(0.94 0.03 175);
+  --radius: 12px;
+  --font-display: "Sora", ui-sans-serif, system-ui, sans-serif;
+  --font-sans: "Figtree", ui-sans-serif, system-ui, sans-serif;
+  --shadow-sm: 0 1px 2px oklch(0.22 0.02 175 / 0.06);
+  --shadow-md: 0 8px 24px oklch(0.22 0.02 175 / 0.08);
+
+  /* Component */
+  --table-row-hover-bg: var(--muted);
+  --badge-live-bg: oklch(0.94 0.05 175);
+  --badge-live-fg: var(--raw-teal-700);
+  --input-bg: var(--raw-white);
+  --overlay: oklch(0.22 0.02 175 / 0.45);
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-surface: var(--surface);
+  --color-surface-elevated: var(--surface-elevated);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-primary: var(--primary);
+  --color-primary-hover: var(--primary-hover);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-border: var(--border);
+  --color-ring: var(--ring);
+  --color-success: var(--success);
+  --color-warning: var(--warning);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-active: var(--sidebar-active);
+  --font-display: var(--font-display);
+  --font-sans: var(--font-sans);
+  --radius-sm: 6px;
+  --radius-md: var(--radius);
+  --radius-lg: 16px;
+  --shadow-sm: var(--shadow-sm);
+  --shadow-md: var(--shadow-md);
+}
+
+@layer base {
+  * {
+    border-color: var(--border);
+  }
+
+  html {
+    color-scheme: light;
+  }
+
+  body {
+    margin: 0;
+    min-height: 100dvh;
+    background: var(--background);
+    color: var(--foreground);
+    font-family: var(--font-sans);
+    font-size: 0.9375rem;
+    line-height: 1.55;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  h1,
+  h2,
+  h3 {
+    font-family: var(--font-display);
+    text-wrap: balance;
+    letter-spacing: -0.02em;
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--ring);
+    outline-offset: 2px;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+}
+
+@keyframes fairway-pulse {
+  0%,
+  100% {
+    opacity: 0.55;
+    transform: scaleY(0.85);
+  }
+  50% {
+    opacity: 1;
+    transform: scaleY(1);
+  }
+}
+
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fairway-pulse {
+  animation: fairway-pulse 1.8s ease-in-out infinite;
+  transform-origin: bottom;
+}
+
+.animate-fade-up {
+  animation: fade-up 0.35s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+.tabular {
+  font-variant-numeric: tabular-nums;
+}
