@@ -130,6 +130,6 @@
       ]
     }
   ],
-  "uiStack": "web-vite",
-  "frontendVerifyCommand": "vite production compile (deferred \u2014 LaunchPad host verifies outside agent)"
+  "uiStack": "web",
+  "frontendVerifyCommand": "npm run build"
 }

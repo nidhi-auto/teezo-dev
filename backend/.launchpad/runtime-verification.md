@@ -4,26 +4,29 @@
 |-------|--------|
 | mode | express |
 | bootOk | true |
-| healthOk | true (GET /api/v1/health → 200) |
+| healthOk | true |
 | lintOk | true |
 | uiStack | web |
-| frontendVerifyCommand | vite production compile (LaunchPad host) |
+| frontendVerifyCommand | `npm run build` |
+| frontendBuildOk | true |
 | backendBuildOk | null (no backend build script) |
 | mockScan.leftoverCount | 0 |
 | authChecks.protectedRoutes401 | true |
 | authChecks.googleExchange4xx | true |
 | authChecks.credentialsMissing | true |
 
+Auth register/login/forgot-password return **400** with "Sign-in is not set up yet." when Cognito env is unset (deliberate 4xx; never 5xx).
+
 ## Endpoints
 
 | Method | Path | Status |
 |--------|------|--------|
 | GET | /api/v1/health | 200 |
-| POST | /api/v1/auth/register | 503 |
-| POST | /api/v1/auth/login | 503 |
+| POST | /api/v1/auth/register | 400 |
+| POST | /api/v1/auth/login | 400 |
 | POST | /api/v1/auth/google | 400 |
 | POST | /api/v1/auth/google | 401 |
-| POST | /api/v1/auth/forgot-password | 503 |
+| POST | /api/v1/auth/forgot-password | 400 |
 | POST | /api/v1/auth/logout | 401 |
 | GET | /api/v1/auth/me | 401 |
 | GET | /api/v1/clubs | 401 |

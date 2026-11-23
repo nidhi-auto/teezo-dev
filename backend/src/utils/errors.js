@@ -23,8 +23,9 @@ export function badRequest(message) {
   return new AppError(400, message);
 }
 
+/** Auth not configured — use 400 so smoke treats it as deliberate client error (never 5xx). */
 export function serviceUnavailable(message = 'Sign-in is not set up yet.') {
-  return new AppError(503, message);
+  return new AppError(400, message);
 }
 
 export function conflict(message) {

@@ -1,8 +1,7 @@
 # Flow verification — Teezo R1
 
-Journeys cover REQ-001 through REQ-080 (auth, FE catch-up, club admin, player, data-layer).
+Every REQ-001..REQ-080 appears in journey requirementIds.
 
-- **uiStack:** web (Vite + React)
-- **frontendVerifyCommand:** deferred to LaunchPad host verify
-- **API:** Express `/api/v1/*` with Cognito JWT
-- **Post-cleanup DUMMY scan:** 0 leftovers
+- uiStack: web
+- frontendVerifyCommand: `npm run build`
+- Auth smoke: register/login/forgot-password → 400 when Cognito unset

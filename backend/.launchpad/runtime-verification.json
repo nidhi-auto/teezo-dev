@@ -5,7 +5,8 @@
   "healthOk": true,
   "lintOk": true,
   "uiStack": "web",
-  "frontendVerifyCommand": "vite production compile",
+  "frontendVerifyCommand": "npm run build",
+  "frontendBuildOk": true,
   "backendBuildOk": null,
   "endpoints": [
     {
@@ -16,12 +17,12 @@
     {
       "method": "POST",
       "path": "/api/v1/auth/register",
-      "status": 503
+      "status": 400
     },
     {
       "method": "POST",
       "path": "/api/v1/auth/login",
-      "status": 503
+      "status": 400
     },
     {
       "method": "POST",
@@ -36,7 +37,7 @@
     {
       "method": "POST",
       "path": "/api/v1/auth/forgot-password",
-      "status": 503
+      "status": 400
     },
     {
       "method": "POST",

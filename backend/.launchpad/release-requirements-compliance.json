@@ -233,7 +233,7 @@
     {
       "id": "REQ-047",
       "status": "implemented",
-      "evidence": "POST /api/v1/auth/login via src/lib/auth.tsx"
+      "evidence": "src/lib/auth.tsx:114; backend/.launchpad/runtime-verification.json: POST /api/v1/auth/login \u2192 400"
     },
     {
       "id": "REQ-048",
@@ -248,7 +248,7 @@
     {
       "id": "REQ-050",
       "status": "implemented",
-      "evidence": "POST /api/v1/auth/register"
+      "evidence": "src/lib/auth.tsx:187; backend/.launchpad/runtime-verification.json: POST /api/v1/auth/register \u2192 400"
     },
     {
       "id": "REQ-051",
@@ -383,12 +383,12 @@
     {
       "id": "REQ-077",
       "status": "implemented",
-      "evidence": "ForgotPasswordPage POST /auth/forgot-password"
+      "evidence": "src/pages/auth/ForgotPasswordPage.tsx:20; backend/.launchpad/runtime-verification.json: POST /api/v1/auth/forgot-password \u2192 400"
     },
     {
       "id": "REQ-078",
       "status": "implemented",
-      "evidence": "src/pages/auth/LoginPage.tsx:39; src/lib/auth.tsx:114; backend/.launchpad/runtime-verification.json: POST /api/v1/auth/login \u2192 503"
+      "evidence": "src/pages/auth/LoginPage.tsx:39; src/lib/auth.tsx:114; backend/.launchpad/runtime-verification.json: POST /api/v1/auth/login \u2192 400"
     },
     {
       "id": "REQ-079",

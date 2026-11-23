@@ -48,10 +48,10 @@
 | REQ-044 | dummy_placeholder | See checklist REQ-044 | implemented | src/data/seed.ts:484; src/data/store.ts:134; backend/.launchpad/runtime-verification.json: GET /api/v1/clubs → 401 |  |
 | REQ-045 | dummy_placeholder | See checklist REQ-045 | implemented | src/data/store.ts API-backed | |
 | REQ-046 | dummy_placeholder | See checklist REQ-046 | implemented | src/data/store.ts:41; src/lib/api.ts:57; backend/.launchpad/runtime-verification.json: GET /api/v1/tournaments → 401 |  |
-| REQ-047 | dummy_placeholder | See checklist REQ-047 | implemented | POST /api/v1/auth/login via src/lib/auth.tsx | |
+| REQ-047 | dummy_placeholder | See checklist REQ-047 | implemented | src/lib/auth.tsx:114; backend/.launchpad/runtime-verification.json: POST /api/v1/auth/login → 400 |  |
 | REQ-048 | dummy_placeholder | See checklist REQ-048 | implemented | POST /api/v1/auth/google Cognito exchange | |
 | REQ-049 | dummy_placeholder | See checklist REQ-049 | implemented | POST /api/v1/auth/logout + clear tokens | |
-| REQ-050 | dummy_placeholder | See checklist REQ-050 | implemented | POST /api/v1/auth/register | |
+| REQ-050 | dummy_placeholder | See checklist REQ-050 | implemented | src/lib/auth.tsx:187; backend/.launchpad/runtime-verification.json: POST /api/v1/auth/register → 400 |  |
 | REQ-051 | dummy_placeholder | See checklist REQ-051 | implemented | POST /api/v1/club-admins | |
 | REQ-052 | dummy_placeholder | See checklist REQ-052 | implemented | PATCH /api/v1/club-admins/:id | |
 | REQ-053 | dummy_placeholder | See checklist REQ-053 | implemented | POST /api/v1/club-admins/:id/deactivate | |
@@ -78,7 +78,7 @@
 | REQ-074 | dummy_placeholder | See checklist REQ-074 | implemented | src/lib/auth.tsx signOut | |
 | REQ-075 | dummy_placeholder | See checklist REQ-075 | implemented | src/lib/auth.tsx register to /auth/register | |
 | REQ-076 | dummy_placeholder | See checklist REQ-076 | implemented | SettingsPage GET/PUT /users/:id/settings | |
-| REQ-077 | dummy_placeholder | See checklist REQ-077 | implemented | ForgotPasswordPage POST /auth/forgot-password | |
-| REQ-078 | dummy_placeholder | See checklist REQ-078 | implemented | src/pages/auth/LoginPage.tsx:39; src/lib/auth.tsx:114; backend/.launchpad/runtime-verification.json: POST /api/v1/auth/login → 503 |  |
+| REQ-077 | dummy_placeholder | See checklist REQ-077 | implemented | src/pages/auth/ForgotPasswordPage.tsx:20; backend/.launchpad/runtime-verification.json: POST /api/v1/auth/forgot-password → 400 |  |
+| REQ-078 | dummy_placeholder | See checklist REQ-078 | implemented | src/pages/auth/LoginPage.tsx:39; src/lib/auth.tsx:114; backend/.launchpad/runtime-verification.json: POST /api/v1/auth/login → 400 |  |
 | REQ-079 | dummy_placeholder | See checklist REQ-079 | implemented | src/pages/auth/LoginPage.tsx:51; src/lib/auth.tsx:56; backend/.launchpad/runtime-verification.json: POST /api/v1/auth/google → 400 |  |
 | REQ-080 | dummy_placeholder | See checklist REQ-080 | implemented | RegisterPage POST /auth/register | |
