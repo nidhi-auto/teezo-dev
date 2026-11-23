@@ -28,6 +28,7 @@ export function LoginPage() {
     e.preventDefault()
     setError(null)
     setSubmitting(true)
+    // Cognito email/password via POST /api/v1/auth/login (AuthProvider.signIn)
     const result = await signIn(email.trim(), password)
     setSubmitting(false)
     if (!result.ok) {
@@ -40,6 +41,7 @@ export function LoginPage() {
   async function onGoogleSuccess(credential: string) {
     setError(null)
     setSubmitting(true)
+    // Google Identity credential → POST /api/v1/auth/google → Cognito JWTs
     const result = await signInWithGoogle({ idToken: credential })
     setSubmitting(false)
     if (!result.ok && result.error !== 'Redirecting to Google…') {

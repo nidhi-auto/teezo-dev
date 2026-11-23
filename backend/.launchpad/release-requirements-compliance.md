@@ -45,9 +45,9 @@
 | REQ-041 | frontend_diff_summary | See checklist REQ-041 | implemented | src/pages/player/BrowseClubsPage.tsx present under development-1 uiRoot=. | |
 | REQ-042 | frontend_diff_summary | See checklist REQ-042 | implemented | src/pages/player/MobilePlayerApp.tsx present under development-1 uiRoot=. | |
 | REQ-043 | dummy_placeholder | See checklist REQ-043 | implemented | src/data/seed.ts deleted; API hydrate via src/data/store.ts | |
-| REQ-044 | dummy_placeholder | See checklist REQ-044 | implemented | src/data/seed.ts deleted; hydrate API state | |
+| REQ-044 | dummy_placeholder | See checklist REQ-044 | implemented | src/data/seed.ts:1-6 (no demo seed); src/data/store.ts:134 hydrate() / :103 refreshAll(); runtime-verification.json: GET /api/v1/clubs → 401 |  |
 | REQ-045 | dummy_placeholder | See checklist REQ-045 | implemented | src/data/store.ts API-backed | |
-| REQ-046 | dummy_placeholder | See checklist REQ-046 | implemented | simulated delay removed; real apiRequest | |
+| REQ-046 | dummy_placeholder | See checklist REQ-046 | implemented | src/data/store.ts:39 (API hydrate lifecycle); src/lib/api.ts:57 apiRequest; runtime-verification.json: GET /api/v1/tournaments → 401 |  |
 | REQ-047 | dummy_placeholder | See checklist REQ-047 | implemented | POST /api/v1/auth/login via src/lib/auth.tsx | |
 | REQ-048 | dummy_placeholder | See checklist REQ-048 | implemented | POST /api/v1/auth/google Cognito exchange | |
 | REQ-049 | dummy_placeholder | See checklist REQ-049 | implemented | POST /api/v1/auth/logout + clear tokens | |
@@ -70,7 +70,7 @@
 | REQ-066 | dummy_placeholder | See checklist REQ-066 | implemented | POST /api/v1/join-requests/:id/approve | |
 | REQ-067 | dummy_placeholder | See checklist REQ-067 | implemented | POST /api/v1/join-requests/:id/reject | |
 | REQ-068 | dummy_placeholder | See checklist REQ-068 | implemented | POST /api/v1/tournaments/:id/registrations | |
-| REQ-069 | dummy_placeholder | See checklist REQ-069 | implemented | resetStore removed with seed | |
+| REQ-069 | dummy_placeholder | See checklist REQ-069 | implemented | src/data/store.ts:65-72 resetHydrate (no resetStore/seed); runtime-verification.json: POST /api/v1/auth/logout → 401 |  |
 | REQ-070 | dummy_placeholder | See checklist REQ-070 | implemented | src/hooks/useSimulatedLoad.ts usePageLoad hydrate | |
 | REQ-071 | dummy_placeholder | See checklist REQ-071 | implemented | src/lib/auth.tsx Cognito session restore GET /auth/me | |
 | REQ-072 | dummy_placeholder | See checklist REQ-072 | implemented | src/lib/auth.tsx signIn to /auth/login | |
@@ -79,6 +79,6 @@
 | REQ-075 | dummy_placeholder | See checklist REQ-075 | implemented | src/lib/auth.tsx register to /auth/register | |
 | REQ-076 | dummy_placeholder | See checklist REQ-076 | implemented | SettingsPage GET/PUT /users/:id/settings | |
 | REQ-077 | dummy_placeholder | See checklist REQ-077 | implemented | ForgotPasswordPage POST /auth/forgot-password | |
-| REQ-078 | dummy_placeholder | See checklist REQ-078 | implemented | LoginPage Cognito sign-in | |
-| REQ-079 | dummy_placeholder | See checklist REQ-079 | implemented | LoginPage GoogleLogin Cognito exchange | |
+| REQ-078 | dummy_placeholder | See checklist REQ-078 | implemented | src/pages/auth/LoginPage.tsx:31-32 Cognito signIn; src/lib/auth.tsx:114 POST /api/v1/auth/login; runtime-verification.json: POST /api/v1/auth/login → 503 (credentialsMissing) |  |
+| REQ-079 | dummy_placeholder | See checklist REQ-079 | implemented | src/pages/auth/LoginPage.tsx:44-45 Google idToken → Cognito; src/lib/auth.tsx:56 POST /api/v1/auth/google; runtime-verification.json: POST /api/v1/auth/google → 400/401 |  |
 | REQ-080 | dummy_placeholder | See checklist REQ-080 | implemented | RegisterPage POST /auth/register | |

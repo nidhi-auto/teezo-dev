@@ -1,0 +1,211 @@
+{
+  "mode": "express",
+  "bootOk": true,
+  "handlersLoadedOk": null,
+  "healthOk": true,
+  "lintOk": true,
+  "uiStack": "web",
+  "frontendVerifyCommand": "vite production compile (LaunchPad host)",
+  "backendBuildOk": null,
+  "endpoints": [
+    {
+      "method": "GET",
+      "path": "/api/v1/health",
+      "status": 200
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/auth/register",
+      "status": 503,
+      "credentialsMissing": true
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/auth/login",
+      "status": 503,
+      "credentialsMissing": true
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/auth/google",
+      "status": 400
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/auth/google",
+      "status": 401
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/auth/forgot-password",
+      "status": 503,
+      "credentialsMissing": true
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/auth/logout",
+      "status": 401
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/auth/me",
+      "status": 401
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/clubs",
+      "status": 401
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/clubs",
+      "status": 401
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/club-admins",
+      "status": 401
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/club-admins",
+      "status": 401
+    },
+    {
+      "method": "PATCH",
+      "path": "/api/v1/club-admins/00000000-0000-0000-0000-000000000001",
+      "status": 401
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/club-admins/00000000-0000-0000-0000-000000000001/deactivate",
+      "status": 401
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/players",
+      "status": 401
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/clubs/00000000-0000-0000-0000-000000000001/players",
+      "status": 401
+    },
+    {
+      "method": "PATCH",
+      "path": "/api/v1/players/00000000-0000-0000-0000-000000000001",
+      "status": 401
+    },
+    {
+      "method": "DELETE",
+      "path": "/api/v1/clubs/00000000-0000-0000-0000-000000000001/players/00000000-0000-0000-0000-000000000002",
+      "status": 401
+    },
+    {
+      "method": "PATCH",
+      "path": "/api/v1/users/00000000-0000-0000-0000-000000000001",
+      "status": 401
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/users/00000000-0000-0000-0000-000000000001/settings",
+      "status": 401
+    },
+    {
+      "method": "PUT",
+      "path": "/api/v1/users/00000000-0000-0000-0000-000000000001/settings",
+      "status": 401
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/tournaments",
+      "status": 401
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/tournaments",
+      "status": 401
+    },
+    {
+      "method": "PATCH",
+      "path": "/api/v1/tournaments/00000000-0000-0000-0000-000000000001",
+      "status": 401
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/tournaments/00000000-0000-0000-0000-000000000001/publish",
+      "status": 401
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/tournaments/00000000-0000-0000-0000-000000000001/close",
+      "status": 401
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/tournaments/00000000-0000-0000-0000-000000000001/registrations",
+      "status": 401
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/invitations",
+      "status": 401
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/invitations",
+      "status": 401
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/invitations/00000000-0000-0000-0000-000000000001/accept",
+      "status": 401
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/invitations/00000000-0000-0000-0000-000000000001/decline",
+      "status": 401
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/join-requests",
+      "status": 401
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/join-requests",
+      "status": 401
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/join-requests/00000000-0000-0000-0000-000000000001/approve",
+      "status": 401
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/join-requests/00000000-0000-0000-0000-000000000001/reject",
+      "status": 401
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/memberships",
+      "status": 401
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/registrations",
+      "status": 401
+    }
+  ],
+  "unmatchedFrontendCalls": [],
+  "authChecks": {
+    "protectedRoutes401": true,
+    "jwtWiredOnProtectedRoutes": true,
+    "googleExchange4xx": true,
+    "credentialsMissing": true
+  },
+  "mockScan": {
+    "leftoverCount": 0,
+    "items": []
+  }
+}

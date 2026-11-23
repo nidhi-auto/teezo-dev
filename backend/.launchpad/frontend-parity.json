@@ -1,0 +1,7 @@
+{
+  "ok": true,
+  "expectedRoot": "launchpad-frontend",
+  "actualRoot": ".",
+  "missingPaths": [],
+  "extraNotes": "uiRoot=. SPA synced from launchpad-frontend; preview seed.ts replaced with empty module documenting API hydrate"
+}

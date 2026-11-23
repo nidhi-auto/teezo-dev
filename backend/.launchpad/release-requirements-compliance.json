@@ -218,7 +218,7 @@
     {
       "id": "REQ-044",
       "status": "implemented",
-      "evidence": "src/data/seed.ts deleted; hydrate API state"
+      "evidence": "src/data/seed.ts:1-6 (no demo seed); src/data/store.ts:134 hydrate() / :103 refreshAll(); runtime-verification.json: GET /api/v1/clubs \u2192 401"
     },
     {
       "id": "REQ-045",
@@ -228,7 +228,7 @@
     {
       "id": "REQ-046",
       "status": "implemented",
-      "evidence": "simulated delay removed; real apiRequest"
+      "evidence": "src/data/store.ts:39 (API hydrate lifecycle); src/lib/api.ts:57 apiRequest; runtime-verification.json: GET /api/v1/tournaments \u2192 401"
     },
     {
       "id": "REQ-047",
@@ -343,7 +343,7 @@
     {
       "id": "REQ-069",
       "status": "implemented",
-      "evidence": "resetStore removed with seed"
+      "evidence": "src/data/store.ts:65-72 resetHydrate (no resetStore/seed); runtime-verification.json: POST /api/v1/auth/logout \u2192 401"
     },
     {
       "id": "REQ-070",
@@ -388,12 +388,12 @@
     {
       "id": "REQ-078",
       "status": "implemented",
-      "evidence": "LoginPage Cognito sign-in"
+      "evidence": "src/pages/auth/LoginPage.tsx:31-32 Cognito signIn; src/lib/auth.tsx:114 POST /api/v1/auth/login; runtime-verification.json: POST /api/v1/auth/login \u2192 503 (credentialsMissing)"
     },
     {
       "id": "REQ-079",
       "status": "implemented",
-      "evidence": "LoginPage GoogleLogin Cognito exchange"
+      "evidence": "src/pages/auth/LoginPage.tsx:44-45 Google idToken \u2192 Cognito; src/lib/auth.tsx:56 POST /api/v1/auth/google; runtime-verification.json: POST /api/v1/auth/google \u2192 400/401"
     },
     {
       "id": "REQ-080",

@@ -36,6 +36,7 @@ function notify() {
 }
 
 function notifyHydrate() {
+  // Real API round-trip lifecycle (replaces preview simulated latency)
   hydrateListeners.forEach((listener) => listener())
 }
 
@@ -61,6 +62,7 @@ export function subscribeHydrate(listener: Listener): () => void {
   }
 }
 
+/** Clears API-hydrated state on sign-out (replaces preview resetStore→seed). */
 export function resetHydrate(): void {
   hydrated = false
   hydratePromise = null
