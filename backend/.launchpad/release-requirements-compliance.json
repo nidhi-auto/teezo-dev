@@ -1,0 +1,404 @@
+{
+  "requirements": [
+    {
+      "id": "REQ-001",
+      "status": "implemented",
+      "evidence": "src/assets/illustrations/auth-panel.svg; src/pages/auth/LoginPage.tsx"
+    },
+    {
+      "id": "REQ-002",
+      "status": "implemented",
+      "evidence": "backend/plan/backend-vR1-release1-0-0.md"
+    },
+    {
+      "id": "REQ-003",
+      "status": "implemented",
+      "evidence": "src/App.tsx present under development-1 uiRoot=."
+    },
+    {
+      "id": "REQ-004",
+      "status": "implemented",
+      "evidence": "src/assets/icons/nav-clubs.svg present under development-1 uiRoot=."
+    },
+    {
+      "id": "REQ-005",
+      "status": "implemented",
+      "evidence": "src/assets/icons/nav-players.svg present under development-1 uiRoot=."
+    },
+    {
+      "id": "REQ-006",
+      "status": "implemented",
+      "evidence": "src/assets/icons/nav-requests.svg present under development-1 uiRoot=."
+    },
+    {
+      "id": "REQ-007",
+      "status": "implemented",
+      "evidence": "src/assets/icons/nav-tournaments.svg present under development-1 uiRoot=."
+    },
+    {
+      "id": "REQ-008",
+      "status": "implemented",
+      "evidence": "src/assets/illustrations/auth-panel.svg present under development-1 uiRoot=."
+    },
+    {
+      "id": "REQ-009",
+      "status": "implemented",
+      "evidence": "src/assets/illustrations/empty-invites.svg present under development-1 uiRoot=."
+    },
+    {
+      "id": "REQ-010",
+      "status": "implemented",
+      "evidence": "src/assets/illustrations/empty-roster.svg present under development-1 uiRoot=."
+    },
+    {
+      "id": "REQ-011",
+      "status": "implemented",
+      "evidence": "src/assets/illustrations/hero-fairway.svg present under development-1 uiRoot=."
+    },
+    {
+      "id": "REQ-012",
+      "status": "implemented",
+      "evidence": "src/assets/logos/teezo-mark.svg present under development-1 uiRoot=."
+    },
+    {
+      "id": "REQ-013",
+      "status": "implemented",
+      "evidence": "src/assets/README.md present under development-1 uiRoot=."
+    },
+    {
+      "id": "REQ-014",
+      "status": "implemented",
+      "evidence": "src/components/FairwayBoard.tsx present under development-1 uiRoot=."
+    },
+    {
+      "id": "REQ-015",
+      "status": "implemented",
+      "evidence": "src/components/shell/AppShell.tsx present under development-1 uiRoot=."
+    },
+    {
+      "id": "REQ-016",
+      "status": "implemented",
+      "evidence": "src/components/shell/RequireAuth.tsx present under development-1 uiRoot=."
+    },
+    {
+      "id": "REQ-017",
+      "status": "implemented",
+      "evidence": "src/components/ui/Badge.tsx present under development-1 uiRoot=."
+    },
+    {
+      "id": "REQ-018",
+      "status": "implemented",
+      "evidence": "src/components/ui/Button.tsx present under development-1 uiRoot=."
+    },
+    {
+      "id": "REQ-019",
+      "status": "implemented",
+      "evidence": "src/components/ui/DataTable.tsx present under development-1 uiRoot=."
+    },
+    {
+      "id": "REQ-020",
+      "status": "implemented",
+      "evidence": "src/components/ui/Dialog.tsx present under development-1 uiRoot=."
+    },
+    {
+      "id": "REQ-021",
+      "status": "implemented",
+      "evidence": "src/components/ui/EmptyState.tsx present under development-1 uiRoot=."
+    },
+    {
+      "id": "REQ-022",
+      "status": "implemented",
+      "evidence": "src/components/ui/FilterBar.tsx present under development-1 uiRoot=."
+    },
+    {
+      "id": "REQ-023",
+      "status": "implemented",
+      "evidence": "src/components/ui/Input.tsx present under development-1 uiRoot=."
+    },
+    {
+      "id": "REQ-024",
+      "status": "implemented",
+      "evidence": "src/components/ui/PageHeader.tsx present under development-1 uiRoot=."
+    },
+    {
+      "id": "REQ-025",
+      "status": "implemented",
+      "evidence": "src/components/ui/Select.tsx present under development-1 uiRoot=."
+    },
+    {
+      "id": "REQ-026",
+      "status": "implemented",
+      "evidence": "src/components/ui/Skeleton.tsx present under development-1 uiRoot=."
+    },
+    {
+      "id": "REQ-027",
+      "status": "implemented",
+      "evidence": "src/components/ui/Textarea.tsx present under development-1 uiRoot=."
+    },
+    {
+      "id": "REQ-028",
+      "status": "implemented",
+      "evidence": "src/components/ui/Toast.tsx present under development-1 uiRoot=."
+    },
+    {
+      "id": "REQ-029",
+      "status": "implemented",
+      "evidence": "src/hooks/useSimulatedLoad.ts present under development-1 uiRoot=."
+    },
+    {
+      "id": "REQ-030",
+      "status": "implemented",
+      "evidence": "src/hooks/useStore.ts present under development-1 uiRoot=."
+    },
+    {
+      "id": "REQ-031",
+      "status": "implemented",
+      "evidence": "src/index.css present under development-1 uiRoot=."
+    },
+    {
+      "id": "REQ-032",
+      "status": "implemented",
+      "evidence": "src/main.tsx present under development-1 uiRoot=."
+    },
+    {
+      "id": "REQ-033",
+      "status": "implemented",
+      "evidence": "src/pages/auth/ForgotPasswordPage.tsx present under development-1 uiRoot=."
+    },
+    {
+      "id": "REQ-034",
+      "status": "implemented",
+      "evidence": "src/pages/auth/LoginPage.tsx present under development-1 uiRoot=."
+    },
+    {
+      "id": "REQ-035",
+      "status": "implemented",
+      "evidence": "src/pages/auth/RegisterPage.tsx present under development-1 uiRoot=."
+    },
+    {
+      "id": "REQ-036",
+      "status": "implemented",
+      "evidence": "src/pages/club-admin/InvitationsPage.tsx present under development-1 uiRoot=."
+    },
+    {
+      "id": "REQ-037",
+      "status": "implemented",
+      "evidence": "src/pages/club-admin/JoinRequestsPage.tsx present under development-1 uiRoot=."
+    },
+    {
+      "id": "REQ-038",
+      "status": "implemented",
+      "evidence": "src/pages/HomePage.tsx present under development-1 uiRoot=."
+    },
+    {
+      "id": "REQ-039",
+      "status": "implemented",
+      "evidence": "src/pages/marketing/LandingPage.tsx present under development-1 uiRoot=."
+    },
+    {
+      "id": "REQ-040",
+      "status": "implemented",
+      "evidence": "src/pages/NotFoundPage.tsx present under development-1 uiRoot=."
+    },
+    {
+      "id": "REQ-041",
+      "status": "implemented",
+      "evidence": "src/pages/player/BrowseClubsPage.tsx present under development-1 uiRoot=."
+    },
+    {
+      "id": "REQ-042",
+      "status": "implemented",
+      "evidence": "src/pages/player/MobilePlayerApp.tsx present under development-1 uiRoot=."
+    },
+    {
+      "id": "REQ-043",
+      "status": "implemented",
+      "evidence": "src/data/seed.ts deleted; API hydrate via src/data/store.ts"
+    },
+    {
+      "id": "REQ-044",
+      "status": "implemented",
+      "evidence": "src/data/seed.ts deleted; hydrate API state"
+    },
+    {
+      "id": "REQ-045",
+      "status": "implemented",
+      "evidence": "src/data/store.ts API-backed"
+    },
+    {
+      "id": "REQ-046",
+      "status": "implemented",
+      "evidence": "simulated delay removed; real apiRequest"
+    },
+    {
+      "id": "REQ-047",
+      "status": "implemented",
+      "evidence": "POST /api/v1/auth/login via src/lib/auth.tsx"
+    },
+    {
+      "id": "REQ-048",
+      "status": "implemented",
+      "evidence": "POST /api/v1/auth/google Cognito exchange"
+    },
+    {
+      "id": "REQ-049",
+      "status": "implemented",
+      "evidence": "POST /api/v1/auth/logout + clear tokens"
+    },
+    {
+      "id": "REQ-050",
+      "status": "implemented",
+      "evidence": "POST /api/v1/auth/register"
+    },
+    {
+      "id": "REQ-051",
+      "status": "implemented",
+      "evidence": "POST /api/v1/club-admins"
+    },
+    {
+      "id": "REQ-052",
+      "status": "implemented",
+      "evidence": "PATCH /api/v1/club-admins/:id"
+    },
+    {
+      "id": "REQ-053",
+      "status": "implemented",
+      "evidence": "POST /api/v1/club-admins/:id/deactivate"
+    },
+    {
+      "id": "REQ-054",
+      "status": "implemented",
+      "evidence": "PATCH /api/v1/users/:id"
+    },
+    {
+      "id": "REQ-055",
+      "status": "implemented",
+      "evidence": "POST /api/v1/clubs/:id/players"
+    },
+    {
+      "id": "REQ-056",
+      "status": "implemented",
+      "evidence": "PATCH /api/v1/players/:id"
+    },
+    {
+      "id": "REQ-057",
+      "status": "implemented",
+      "evidence": "DELETE /api/v1/clubs/:id/players/:userId"
+    },
+    {
+      "id": "REQ-058",
+      "status": "implemented",
+      "evidence": "POST /api/v1/tournaments"
+    },
+    {
+      "id": "REQ-059",
+      "status": "implemented",
+      "evidence": "PATCH /api/v1/tournaments/:id"
+    },
+    {
+      "id": "REQ-060",
+      "status": "implemented",
+      "evidence": "POST /api/v1/tournaments/:id/publish"
+    },
+    {
+      "id": "REQ-061",
+      "status": "implemented",
+      "evidence": "POST /api/v1/tournaments/:id/close"
+    },
+    {
+      "id": "REQ-062",
+      "status": "implemented",
+      "evidence": "POST /api/v1/invitations"
+    },
+    {
+      "id": "REQ-063",
+      "status": "implemented",
+      "evidence": "POST /api/v1/invitations/:id/accept"
+    },
+    {
+      "id": "REQ-064",
+      "status": "implemented",
+      "evidence": "POST /api/v1/invitations/:id/decline"
+    },
+    {
+      "id": "REQ-065",
+      "status": "implemented",
+      "evidence": "POST /api/v1/join-requests"
+    },
+    {
+      "id": "REQ-066",
+      "status": "implemented",
+      "evidence": "POST /api/v1/join-requests/:id/approve"
+    },
+    {
+      "id": "REQ-067",
+      "status": "implemented",
+      "evidence": "POST /api/v1/join-requests/:id/reject"
+    },
+    {
+      "id": "REQ-068",
+      "status": "implemented",
+      "evidence": "POST /api/v1/tournaments/:id/registrations"
+    },
+    {
+      "id": "REQ-069",
+      "status": "implemented",
+      "evidence": "resetStore removed with seed"
+    },
+    {
+      "id": "REQ-070",
+      "status": "implemented",
+      "evidence": "src/hooks/useSimulatedLoad.ts usePageLoad hydrate"
+    },
+    {
+      "id": "REQ-071",
+      "status": "implemented",
+      "evidence": "src/lib/auth.tsx Cognito session restore GET /auth/me"
+    },
+    {
+      "id": "REQ-072",
+      "status": "implemented",
+      "evidence": "src/lib/auth.tsx signIn to /auth/login"
+    },
+    {
+      "id": "REQ-073",
+      "status": "implemented",
+      "evidence": "src/lib/auth.tsx Google to /auth/google"
+    },
+    {
+      "id": "REQ-074",
+      "status": "implemented",
+      "evidence": "src/lib/auth.tsx signOut"
+    },
+    {
+      "id": "REQ-075",
+      "status": "implemented",
+      "evidence": "src/lib/auth.tsx register to /auth/register"
+    },
+    {
+      "id": "REQ-076",
+      "status": "implemented",
+      "evidence": "SettingsPage GET/PUT /users/:id/settings"
+    },
+    {
+      "id": "REQ-077",
+      "status": "implemented",
+      "evidence": "ForgotPasswordPage POST /auth/forgot-password"
+    },
+    {
+      "id": "REQ-078",
+      "status": "implemented",
+      "evidence": "LoginPage Cognito sign-in"
+    },
+    {
+      "id": "REQ-079",
+      "status": "implemented",
+      "evidence": "LoginPage GoogleLogin Cognito exchange"
+    },
+    {
+      "id": "REQ-080",
+      "status": "implemented",
+      "evidence": "RegisterPage POST /auth/register"
+    }
+  ]
+}

@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 220" fill="none" role="img" aria-label="Empty roster with scorecard and tee">
+  <rect x="36" y="40" width="160" height="140" rx="14" fill="#F4FAF8" stroke="#D5E4DF" stroke-width="2"/>
+  <path d="M56 72h120M56 96h96M56 120h108M56 144h72" stroke="#29D1B5" stroke-width="6" stroke-linecap="round" opacity=".45"/>
+  <circle cx="230" cy="78" r="22" fill="#29D1B5"/>
+  <path d="M230 100v70" stroke="#0B3D36" stroke-width="4" stroke-linecap="round"/>
+  <path d="M210 178c12-18 28-28 48-28" stroke="#0B3D36" stroke-width="3" stroke-linecap="round" opacity=".5"/>
+  <rect x="210" y="130" width="70" height="48" rx="10" fill="#fff" stroke="#D5E4DF" stroke-width="2"/>
+  <path d="M224 148h42M224 162h28" stroke="#5A6F6A" stroke-width="4" stroke-linecap="round" opacity=".5"/>
+</svg>
